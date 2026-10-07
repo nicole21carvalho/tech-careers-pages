@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-labelledby="t">
+  <title id="t">Ilustração de um editor de código com linhas coloridas e um terminal mostrando testes aprovados</title>
+  <rect width="480" height="360" fill="#e3f8ef"/>
+  <circle cx="410" cy="300" r="44" fill="#c4efdc"/>
+  <circle cx="60" cy="60" r="30" fill="#c4efdc"/>
+  <!-- Editor -->
+  <rect x="60" y="54" width="300" height="210" rx="18" fill="#14231d"/>
+  <circle cx="84" cy="76" r="6" fill="#ff6b6b"/>
+  <circle cx="104" cy="76" r="6" fill="#ffd66b"/>
+  <circle cx="124" cy="76" r="6" fill="#4ade80"/>
+  <!-- Linhas de código -->
+  <g stroke-linecap="round" stroke-width="9">
+    <line x1="84" y1="110" x2="124" y2="110" stroke="#c084fc"/>
+    <line x1="136" y1="110" x2="214" y2="110" stroke="#6ee7b7"/>
+    <line x1="104" y1="134" x2="150" y2="134" stroke="#93c5fd"/>
+    <line x1="162" y1="134" x2="262" y2="134" stroke="#fde68a"/>
+    <line x1="104" y1="158" x2="196" y2="158" stroke="#6ee7b7"/>
+    <line x1="124" y1="182" x2="168" y2="182" stroke="#c084fc"/>
+    <line x1="180" y1="182" x2="300" y2="182" stroke="#93c5fd"/>
+    <line x1="104" y1="206" x2="232" y2="206" stroke="#fde68a"/>
+    <line x1="84" y1="230" x2="104" y2="230" stroke="#c084fc"/>
+  </g>
+  <!-- Terminal -->
+  <rect x="250" y="190" width="180" height="120" rx="16" fill="#0f9d6b"/>
+  <path d="M272 224 l14 12 l-14 12" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="296" y1="248" x2="330" y2="248" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="390" cy="236" r="22" fill="#fff"/>
+  <path d="M379 236 l8 8 l15 -15" fill="none" stroke="#0f9d6b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="272" y1="282" x2="404" y2="282" stroke="#a7f3d0" stroke-width="6" stroke-linecap="round"/>
+  <!-- Chaves -->
+  <text x="372" y="92" font-family="monospace" font-size="56" font-weight="700" fill="#0f9d6b">{ }</text>
+</svg>
