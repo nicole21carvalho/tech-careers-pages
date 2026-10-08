@@ -1,0 +1,267 @@
+:root {
+  --fundo: #fbfaff;
+  --texto: #1d1a2b;
+  --texto-suave: #5d5873;
+  --borda: #e7e3f3;
+  --cartao: #ffffff;
+  --destaque: #7c3aed;
+  --destaque-suave: #f1eafe;
+}
+
+/* Cada carreira tem a sua cor, mantendo as cores das páginas originais */
+.tema-ux {
+  --destaque: #8b3fd9;
+  --destaque-suave: #f3e9fd;
+}
+
+.tema-programacao {
+  --destaque: #0f9d6b;
+  --destaque-suave: #e3f8ef;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--destaque);
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Cabeçalho ---------- */
+
+.topo {
+  border-bottom: 1px solid var(--borda);
+  background: var(--cartao);
+}
+
+.topo .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  flex-wrap: wrap;
+}
+
+.marca {
+  font-weight: 700;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  color: var(--texto-suave);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover,
+.menu a[aria-current='page'] {
+  color: var(--destaque);
+}
+
+/* ---------- Página inicial ---------- */
+
+.capa {
+  padding: 72px 0 40px;
+  text-align: center;
+}
+
+.capa h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.capa p {
+  max-width: 60ch;
+  margin: 0 auto;
+  color: var(--texto-suave);
+  font-size: 1.125rem;
+}
+
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding-bottom: 72px;
+}
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  background: var(--cartao);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.cartao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(40, 20, 80, 0.1);
+}
+
+.cartao img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: var(--destaque-suave);
+}
+
+.cartao h2 {
+  font-size: 1.375rem;
+}
+
+.cartao p {
+  color: var(--texto-suave);
+}
+
+.cartao span {
+  margin-top: auto;
+  color: var(--destaque);
+  font-weight: 600;
+}
+
+/* ---------- Página de carreira ---------- */
+
+.artigo {
+  padding: 56px 0 72px;
+}
+
+.artigo__topo {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--destaque-suave);
+  color: var(--destaque);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.artigo h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.artigo__resumo {
+  color: var(--texto-suave);
+  font-size: 1.125rem;
+}
+
+.artigo__imagem {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  background: var(--destaque-suave);
+}
+
+.artigo__corpo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.artigo__corpo p + p {
+  margin-top: 1em;
+}
+
+.artigo__corpo strong {
+  color: var(--destaque);
+}
+
+.destaques {
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--destaque-suave);
+}
+
+.destaques h2 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.destaques ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 1.2em;
+}
+
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--borda);
+  font-weight: 600;
+}
+
+.navegacao a {
+  text-decoration: none;
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+  margin-top: auto;
+  padding: 24px 0;
+  border-top: 1px solid var(--borda);
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* ---------- Celular ---------- */
+
+@media (max-width: 760px) {
+  .artigo__topo,
+  .artigo__corpo {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .artigo__imagem {
+    order: -1;
+  }
+}
